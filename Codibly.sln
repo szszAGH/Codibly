@@ -7,7 +7,9 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseMail", "DatabaseEma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailsService", "EmailService\MailsService.csproj", "{85345793-3C4A-49FF-A479-2EBFBA6317C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenderService", "SenderService\SenderService.csproj", "{2574C6CC-3171-473A-8332-A90DEA8F1CCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SenderService", "SenderService\SenderService.csproj", "{2574C6CC-3171-473A-8332-A90DEA8F1CCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestMailService", "XUnitTestMailService\XUnitTestMailService.csproj", "{19727D05-D39E-495F-9F52-8E90D6BECBBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{2574C6CC-3171-473A-8332-A90DEA8F1CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2574C6CC-3171-473A-8332-A90DEA8F1CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2574C6CC-3171-473A-8332-A90DEA8F1CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19727D05-D39E-495F-9F52-8E90D6BECBBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19727D05-D39E-495F-9F52-8E90D6BECBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19727D05-D39E-495F-9F52-8E90D6BECBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19727D05-D39E-495F-9F52-8E90D6BECBBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
