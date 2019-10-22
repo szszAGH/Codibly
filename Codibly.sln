@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseMail", "DatabaseBTC\DatabaseMail.sqlproj", "{B241561E-C29E-4B07-B665-8617250864A5}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseMail", "DatabaseEmail\DatabaseMail.sqlproj", "{B241561E-C29E-4B07-B665-8617250864A5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailsService", "EmailService\MailsService.csproj", "{85345793-3C4A-49FF-A479-2EBFBA6317C0}"
 EndProject
