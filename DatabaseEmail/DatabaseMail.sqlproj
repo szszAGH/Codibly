@@ -57,6 +57,8 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="PostDeployment" />
+    <Folder Include="PostDeployment\Tables" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Attachment.sql" />
@@ -65,5 +67,10 @@
     <Build Include="Address.sql" />
     <Build Include="Types.sql" />
     <Build Include="Priority.sql" />
+    <BuildExtensionConfiguration Include="PostDeployment\Tables\Types.sql" />
+    <BuildExtensionConfiguration Include="PostDeployment\Tables\Priority.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostDeployment\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
