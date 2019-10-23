@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace MailsService.Controllers
+﻿namespace Contract
 {
-    public class Mail
+    public class ReceiveMail
     {
         public string Sender { get; set; }
 
@@ -19,7 +14,7 @@ namespace MailsService.Controllers
 
         public string Body { get; set; }
 
-        public Priority PriorityEmail { get; set; }
+        public SendPriority PriorityEmail { get; set; }
 
         public AttachmentMail[] Attachments { get; set; }        
     }

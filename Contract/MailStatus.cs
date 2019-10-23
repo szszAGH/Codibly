@@ -1,4 +1,4 @@
-﻿namespace MailsService.Controllers
+﻿namespace Contract
 {
     public enum MailStatus
     {

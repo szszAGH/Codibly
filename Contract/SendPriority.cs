@@ -1,6 +1,6 @@
-﻿namespace MailsService.Controllers
+﻿namespace Contract
 {
-    public enum Priority
+    public enum SendPriority
     {
         Normal = 0,
         Low = 1,

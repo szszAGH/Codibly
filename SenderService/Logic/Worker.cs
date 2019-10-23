@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contract;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace SenderService.Logic
 {
     public class Worker
     {
-        private ConcurrentQueue<MailMessage> mailQueue = new ConcurrentQueue<MailMessage>();
+        private ConcurrentQueue<ReceiveMail> mailQueue = new ConcurrentQueue<ReceiveMail>();
 
         private SmtpClient client;
 
@@ -19,24 +20,36 @@ namespace SenderService.Logic
             client = new SmtpClient(host);
             client.UseDefaultCredentials = false;
             client.Credentials = networkCredential;
+
+            //mailQueue.
         }
 
-        public void AddMail(string EmailFrom, string EmailTo, string EmailCc, string Subject, string Body)
+        public void AddMail(ReceiveMail receiveMail)
         {
-            MailMessage mailMessage = new MailMessage();
-            mailMessage.From = new MailAddress(EmailFrom);
-            mailMessage.To.Add(EmailTo);
-            mailMessage.CC.Add(EmailCc);
-
-            mailMessage.Body = Body;
-            mailMessage.Subject = Subject;
-
-            Attachment tt = new Attachment()
-
-            mailMessage.Attachments.Add( )
-
-            mailQueue.Enqueue(mailMessage);
+            mailQueue.Enqueue(receiveMail);
         }
+
+        //public void AddMail(long id)
+        //{
+        //    mailIdQueue.Enqueue(id);
+        //}
+
+        //public void AddMail(string EmailFrom, string EmailTo, string EmailCc, string Subject, string Body)
+        //{
+        //    MailMessage mailMessage = new MailMessage();
+        //    mailMessage.From = new MailAddress(EmailFrom);
+        //    mailMessage.To.Add(EmailTo);
+        //    mailMessage.CC.Add(EmailCc);
+
+        //    mailMessage.Body = Body;
+        //    mailMessage.Subject = Subject;
+
+        //    //Attachment tt = new Attachment()
+
+        //    //mailMessage.Attachments.Add( )
+
+        //    mailQueue.Enqueue(mailMessage);
+        //}
 
         private void Run()
         {
