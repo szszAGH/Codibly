@@ -7,6 +7,8 @@ using MailsService.DbModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
+using MailsService.Clients.Sender.Api;
+
 namespace EmailService.Controllers
 {
     [Route("api/[controller]")]
@@ -199,6 +201,9 @@ namespace EmailService.Controllers
             {
                 Mail mail = databaseMailContext.Mail.SingleOrDefault(m => m.IdMail == item.IdMail);
                 ReceiveMail temp = fillReceiveMail(mail);
+
+                SenderApi senderApi = new SenderApi("http://127.0.0.1:5001");
+                senderApi.SenderPost(temp.Sender, new List<string>(temp.To), new List<string>(temp.Cc), new List<string>(temp.Bcc), temp.Titel, temp.Body, (int)temp.PriorityEmail);               
             }
         }
     }

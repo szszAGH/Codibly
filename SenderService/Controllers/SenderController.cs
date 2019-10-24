@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Contract;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SenderService.DbModel;
 using SenderService.Logic;
 
 namespace SenderService.Controllers
@@ -16,8 +17,12 @@ namespace SenderService.Controllers
     {
         private Worker worker;
 
-        public SenderController()
+        private readonly DatabaseMailContext databaseMailContext;
+
+        public SenderController(DatabaseMailContext context)
         {
+            databaseMailContext = context;
+
             string host = "";
             string user = "";
             string password = "";
